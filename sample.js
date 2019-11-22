@@ -1,4 +1,4 @@
-const { Logger } = require('./index')
+const { Logger } = require('./index');
 
 const logger = new Logger();
 
