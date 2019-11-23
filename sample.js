@@ -2,6 +2,12 @@ const { Logger } = require('./index');
 
 const logger = new Logger();
 
+logger.error('File not found', 'Sample.txt');
+logger.warn('You are using older version of the API');
+logger.success('User has been verified successfully');
+logger.info('Server is running on port 8000');
+logger.debug('I am here :P');
+
 /*
 const logger = new Logger({
     console: 'file',
@@ -24,9 +30,3 @@ const logger = new Logger(
     }
 );
 */
-
-logger.error('File not found', 'Sample.txt');
-logger.warn('You are using older version of the API');
-logger.success('User has been verified successfully');
-logger.info('Server is running on port 8000');
-logger.debug('I am here :P');

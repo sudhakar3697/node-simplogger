@@ -102,3 +102,7 @@ const logger = new Logger({
       <td>Configurable logging levels</td>
    </tr>
 </table>
+
+A screenshot!
+
+![Screenshot](https://i.imgur.com/NlLiW6n.png)
