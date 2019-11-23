@@ -5,8 +5,14 @@ An extremely simple logger for Node.js
 Require the module
 
 ```
-const { Logger } = require('simplogger');
+const Logger = require('simplogger');
 ```
+or
+
+```
+import Logger from 'simplogger';
+```
+
 Usage (Logging to console):
 
 Create an instance of the Logger

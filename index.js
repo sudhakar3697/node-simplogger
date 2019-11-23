@@ -4,12 +4,12 @@ const path = require('path');
 
 class Logger {
   static COLORS = {
-      ERROR: '\x1b[31m%s', // Red
-      WARN: '\x1b[33m%s', // Yellow
-      SUCCESS: '\x1b[32m%s', // Green
-      INFO: '\x1b[37m%s', // White
-      DEBUG: '\x1b[36m%s', // Cyan
-      CLEAR: '\x1b[0m' // Clear
+    ERROR: '\x1b[31m%s', // Red
+    WARN: '\x1b[33m%s', // Yellow
+    SUCCESS: '\x1b[32m%s', // Green
+    INFO: '\x1b[37m%s', // White
+    DEBUG: '\x1b[36m%s', // Cyan
+    CLEAR: '\x1b[0m' // Clear
   };
 
   constructor(config = { levels: ['ERROR', 'WARN', 'SUCCESS', 'INFO', 'DEBUG'] }) {
@@ -104,6 +104,4 @@ class Logger {
   }
 }
 
-module.exports = {
-  Logger,
-};
+module.exports=Logger;
