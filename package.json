@@ -14,7 +14,10 @@
     "log",
     "logger",
     "logs",
-    "loglevel"
+    "loglevel",
+    "simplogger",
+    "simple-logging",
+    "simple-logger"
   ],
   "author": "sudhakar3697",
   "license": "MIT",
