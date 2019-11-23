@@ -1,11 +1,11 @@
-# logger
+# simplogger
 
 An extremely simple logger for Node.js
 
 Require the module
 
 ```
-const { Logger } = require('logger');
+const { Logger } = require('simplogger');
 ```
 Usage (Logging to console):
 
