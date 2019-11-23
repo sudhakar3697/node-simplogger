@@ -50,6 +50,7 @@ const logger = new Logger({
 });
 ```
 
+Configurations for the logger
 
 <table>
    <tr>
