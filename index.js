@@ -3,16 +3,27 @@ const fs = require('fs');
 const path = require('path');
 
 class Logger {
-  static COLORS = {
-    ERROR: '\x1b[31m%s', // Red
-    WARN: '\x1b[33m%s', // Yellow
-    SUCCESS: '\x1b[32m%s', // Green
-    INFO: '\x1b[37m%s', // White
-    DEBUG: '\x1b[36m%s', // Cyan
-    CLEAR: '\x1b[0m' // Clear
-  };
+  // Requires Node v12+
+  // static COLORS = {
+  //   ERROR: '\x1b[31m%s', // Red
+  //   WARN: '\x1b[33m%s', // Yellow
+  //   SUCCESS: '\x1b[32m%s', // Green
+  //   INFO: '\x1b[37m%s', // White
+  //   DEBUG: '\x1b[36m%s', // Cyan
+  //   CLEAR: '\x1b[0m' // Clear
+  // };
 
   constructor(config = { levels: ['ERROR', 'WARN', 'SUCCESS', 'INFO', 'DEBUG'] }) {
+
+    this.COLORS = {
+      ERROR: '\x1b[31m%s', // Red
+      WARN: '\x1b[33m%s', // Yellow
+      SUCCESS: '\x1b[32m%s', // Green
+      INFO: '\x1b[37m%s', // White
+      DEBUG: '\x1b[36m%s', // Cyan
+      CLEAR: '\x1b[0m' // Clear
+    };
+
     this.label = config.label || '';
 
     this.timestampStr = () => {
@@ -38,7 +49,7 @@ class Logger {
             if (config.levels.includes(level)) {
               logFile.write(`${[level, ...msg].join(' ')}\n`);
               // eslint-disable-next-line no-console
-              console.log(Logger.COLORS[level], ...msg, Logger.COLORS.CLEAR);
+              console.log(this.COLORS[level], ...msg, this.COLORS.CLEAR);
             }
           };
         }
@@ -58,7 +69,7 @@ class Logger {
       this.log = (level, ...msg) => {
         if (config.levels.includes(level)) {
           // eslint-disable-next-line no-console
-          console.log(Logger.COLORS[level], ...msg, Logger.COLORS.CLEAR);
+          console.log(this.COLORS[level], ...msg, this.COLORS.CLEAR);
         }
       };
     }
